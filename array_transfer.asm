@@ -1,18 +1,18 @@
 
 segment .data
-    tab1    dw      1, 1, 2, 3, 4, 5, 6, 7, 8, 9
-    tab2    TIMES 10 dw 0
+    array1    dw      1, 1, 2, 3, 4, 5, 6, 7, 8, 9
+    array2    TIMES 10 dw 0
     endl    db      10
 ;----------------------------------------------    
 segment .text
-global _main
-_main:
-    mov     ebx, tab2
+global _start
+_start:
+    mov     ebx, array2
     mov     esi, 0
 
 ; Loop for transferring data
 for1:
-    mov     ax, word[tab1+esi*2]
+    mov     ax, word[array1+esi*2]
     mov     word[ebx+esi*2], ax
     inc     esi
     cmp     esi, 10
@@ -24,10 +24,10 @@ fin:
    
 ; Loop for printing out array items
 for2:
-    mov     eax, tab2
+    mov     eax, array2
     add     eax, esi
     add     eax, esi
-    add     word[tab2+esi*2], 48
+    add     word[array2+esi*2], 48
     ; Print out item 
     mov     ecx, eax
     mov     edx, 1

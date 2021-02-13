@@ -1,6 +1,6 @@
 ;----------------------------------------
 segment .data
-    tab     db      2, 3, 2, 9, 3, 5, 6, 5 ,8 , 1
+    array   db      2, 3, 2, 9, 3, 5, 6, 5 ,8 , 1
     min     db      0
     max     db      0
     endl    db      10
@@ -11,13 +11,13 @@ segment .text
 global _start
 _start:
     mov     esi, 0
-    mov     al, byte [tab]
+    mov     al, byte [array]
     mov     byte [min], al
     mov     byte [max], al
 ; Main loop
 label1:
     inc     esi
-    mov     al, byte[tab+esi]
+    mov     al, byte[array+esi]
     cmp     byte [min], al 
     jnb     label_min
 label2:
