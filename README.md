@@ -4,4 +4,5 @@
 * Multiply two arrays element by element _(mul\_arrays.asm)_.
 * Calculate the sum of all elements of two arrays _(sum\_arrays.asm)_.
 * Invert an array using the srack _(invert\_array.asm)_.
-* Count the number of items which are equal to 0 in an array _(count\_zeros.asm)_.
+* Count the number of items which are equal to 0 in an array using a procedure _(count\_zeros.asm)_.
+* Calculate the greatest common divisor of two integers using a procedure _(gcd.asm)_.
