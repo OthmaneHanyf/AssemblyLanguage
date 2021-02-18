@@ -4,3 +4,4 @@
 * Multiply two arrays element by element _(mul\_arrays.asm)_.
 * Calculate the sum of all elements of two arrays _(sum\_arrays.asm)_.
 * Invert an array using the srack _(invert\_array.asm)_.
+* Count number of items which are equal to 0 in an array _(count\_zeros.asm)_.
